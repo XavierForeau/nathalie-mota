@@ -1,2 +1,3 @@
-<?php
-// Silence is golden. yes
+<?php get_header(); ?>
+
+<?php get_footer(); ?>
