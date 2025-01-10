@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "sass": "^1.83.1",
+    "swiper": "^11.1.14"
+  },
+  "scripts": {
+    "footer": "sass footer.sass footer.css",
+    "dev": "sass --no-source-map sass/style.scss:style.css -w",
+    "build": "sass --no-source-map sass/style.scss:style.css --style=compressed"
+  }
+}

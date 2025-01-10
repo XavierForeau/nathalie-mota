@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Photographe d'event">
+    <meta name="description" content="Photographe">
     <?php wp_head(); ?>
 </head>
 
@@ -16,11 +16,9 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nathalie-mota-logo.png" alt="Mon Logo">
             </div>
 
-            <!-- menu back-office -->
+            <!-- menu -->
             <?php
-            wp_nav_menu([
-                'theme_location' => 'main-menu',
-            ]);
+            wp_nav_menu(['theme_location' => 'menu',]);
             ?>
         </div>
 
@@ -44,3 +42,6 @@
         // formulaire de contact
         echo do_shortcode('[contact-form-7 id="50e16f7" title="Formulaire de contact 1"]');
         ?>
+
+
+        <?php get_footer(); ?>

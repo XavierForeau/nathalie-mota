@@ -2,7 +2,8 @@
 
 // Appel du menu 
 function register_my_menu() {
-    register_nav_menu('main-menu', __('Menu principal', 'text-domain'));
+    register_nav_menu('menu', __('Menu principal', 'text-domain'));
+    register_nav_menu('footer', __('Footer', 'text-domain'));
 }
 add_action('after_setup_theme', 'register_my_menu');
 
@@ -18,3 +19,19 @@ function theme_enqueue_styles() {
     wp_enqueue_style ('font-poppins-style', 'https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap', false);
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+
+function nathalie_mota_widgets(){
+    register_sidebar(
+        array(
+            'name' => "footer",
+            'id' => 'footer-widget',
+            'description' => "Widget pour le pied de page",
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>'
+        )
+    );
+ }
+ add_action('widgets_init', 'nathalie_mota_widgets'); 
+
