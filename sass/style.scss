@@ -1,21 +1,11 @@
 // importations 
 
-//@use "base/_up_down" as *;
+@use "layout/_footer" as *;
+@use "layout/_header" as *;
+@use "layout/_index" as *;
+@use "layout/_modale-contact" as *;
 
  // commande => 'npm run dev' 
  // mode normal & à lancer depuis terminal, 
  // dans le répertoire du thème
 
- * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: #fffef0; 
-    color: #23282d; 
-    font-family: 'Space Mono', monospace;     
-    margin: 0 auto; 
-    width: 100vw;
-}

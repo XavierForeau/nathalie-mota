@@ -11,7 +11,7 @@
 <body>
     <header>
         <!-- Logo -->
-        <div class="header-container">
+        <div class="header-container header">
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nathalie-mota-logo.png" alt="Mon Logo">
             </div>
@@ -22,26 +22,22 @@
             ?>
         </div>
 
-        <div class="banner-home">
+        <div class="banner">
             <?php
-            // image random dans le répertoire des bannieres
+            // image random 
             $image_directory = get_template_directory() . '/assets/images/bannieres/';
             $images = glob($image_directory . '*.jpeg');
             $random_image = $images[array_rand($images)];
+            
+            echo "<script>console.log('image : " . $random_image . "');</script>";
 
             // Affiche l'image en bannière
             echo '<img src="' . $random_image . '" alt="Bannière de présentation">';
+            echo '<img src="' . htmlspecialchars($random_image) . '" alt=" test">';
+
             ?>
         </div>
 
-        <!--
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bannieres/nathalie-0.jpeg" alt="Bannière">
-        -->
-
-        <?php
-        // formulaire de contact
-        echo do_shortcode('[contact-form-7 id="50e16f7" title="Formulaire de contact 1"]');
-        ?>
-
-
+        <img class="random-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/bannieres/nathalie-0.jpeg" alt="Bannière">
+     
         <?php get_footer(); ?>

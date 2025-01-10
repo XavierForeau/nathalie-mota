@@ -1,7 +1,6 @@
 <!--  http://www.w3bai.com/fr/howto/howto_css_modals.html#gsc.tab=0  -->
-<div id="modal-contact" class="modal">
+<div id="myModal" class="modal">
     <div class="modal-content">
-        <span class="close">x</span>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact-header.png" alt="contact header">
         <?php
         // formulaire de contact
